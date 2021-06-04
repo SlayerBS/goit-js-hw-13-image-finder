@@ -1,0 +1,95 @@
+body {
+  padding-top: 30px;
+
+  // font-family: 'Roboto', sans-serif;
+  text-align: center;
+
+  background-image: url('../images/bg.jpg');
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  grid-gap: 1em;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: calc(100vw - 80px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.image-item {
+  display: block;
+  // Экстрамалые девайсы («портретные телефоны», < 576px)
+  @media (max-width: 575px) {
+    width: calc(100vw / 2 - 50px);
+  }
+  // Малые девайсы («ландшафтные», >= 575px)
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: calc(100vw / 3 - 50px);
+  }
+
+  // Средние девайсы («таблетки», >= 768px)
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    width: calc(100vw / 4 - 40px);
+  }
+
+  // Большие девайсы (большие десктопы, >= 1200px)
+  @media (min-width: 1200px) {
+    width: calc(100vw / 6 - 30px);
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: no-wrap;
+  // font-size: 15px;
+}
+.photo-card-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pnotify {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button.is-hidden {
+  display: none;
+}
+
+.button > .spinner.is-hidden {
+  display: none;
+}
+
+// .arrowTop {
+//   height: 9px;
+//   width: 14px;
+//   color: green;
+//   position: fixed;
+//   top: 10px;
+//   left: 10px;
+//   cursor: pointer;
+// }
+
+// .arrowTop::before {
+//   content: '▲';
+// }
+
+.bottom-element {
+  display: block;
+  height: 500px;
+}
